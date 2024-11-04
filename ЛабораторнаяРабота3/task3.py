@@ -1,13 +1,9 @@
-# TODO  Напишите функцию count_letters
+from collections import Counter
+
 def count_letters(text:str):
-    formated_text = text.lower()
-    dict_ = {}
-    for char in formated_text:
-        if char.isalpha():
-            dict_[char] = formated_text.count(char)
-
-    return dict_
-
+    formated_text = ''.join(filter(str.isalpha, text.lower()))
+    letter_count = Counter(formated_text)
+    return letter_count
 
 
 # TODO Напишите функцию calculate_frequency

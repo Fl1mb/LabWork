@@ -1,8 +1,6 @@
 # TODO Напишите функцию find_common_participants
 def find_common_participants(first_group:str, second_group: str, div:str = ","):
-    list1 = first_group.split(div)
-    list2 = second_group.split(div)
-    result = list(set(list1).intersection(set(list2)))
+    result = list(set(first_group.split(div)).intersection(set(second_group.split(div))))
     result.sort()
     return result
 
