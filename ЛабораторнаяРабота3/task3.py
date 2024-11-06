@@ -4,7 +4,10 @@ def count_letters(text:str):
     dict_ = {}
     for char in formated_text:
         if char.isalpha():
-            dict_[char] = formated_text.count(char)
+            if char in dict_:
+                dict_[char] += 1
+            else:
+                dict_[char] =  1
 
     return dict_
 
